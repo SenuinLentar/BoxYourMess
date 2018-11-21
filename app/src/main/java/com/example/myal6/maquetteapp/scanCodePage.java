@@ -31,7 +31,7 @@ public class scanCodePage extends AppCompatActivity {
         setContentView(R.layout.scan_code_page);
 
         this.buttonImage = (Button) this.findViewById(R.id.button_image);
-        this.videoView = (VideoView) this.findViewById(R.id.videoView);
+       // this.videoView = (VideoView) this.findViewById(R.id.videoView);
         this.imageView = (ImageView) this.findViewById(R.id.imageView);
     }
 

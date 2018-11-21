@@ -8,19 +8,42 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/checkList"
+        android:layout_width="358dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:background="#FFA5C8D3"
+        android:drawableLeft="@drawable/liste"
+        android:gravity="center_vertical|end"
+        android:onClick="checkListPage"
+        android:paddingHorizontal="20dp"
+        android:text="Consulter une liste"
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/scanCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/scanCode"
         android:layout_width="358dp"
         android:layout_height="0dp"
-        android:layout_marginTop="64dp"
         android:layout_marginBottom="30dp"
         android:background="#FFA5C8D3"
-        android:text="Scanner un code"
+        android:drawableLeft="@drawable/qrcode"
+        android:gravity="center_vertical|end"
         android:onClick="scanCodePage"
+        android:paddingHorizontal="20dp"
+        android:text="Scanner un code"
+
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/createList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkList"
         app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <Button
@@ -29,8 +52,13 @@
         android:layout_height="0dp"
         android:layout_marginBottom="30dp"
         android:background="#FFA5C8D3"
-        android:text="Créer une liste"
+        android:drawableLeft="@drawable/cahier"
+        android:gravity="center_vertical|end"
         android:onClick="creationListPage"
+        android:paddingHorizontal="20dp"
+        android:text="Créer une liste"
+
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/researchObject"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -41,43 +69,74 @@
         android:id="@+id/researchObject"
         android:layout_width="358dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="30dp"
         android:background="#FFA5C8D3"
-        android:text="Rechercher un objet"
+        android:drawableLeft="@drawable/loupe"
+
         android:onClick="researchObjectPage"
+        android:paddingHorizontal="20dp"
+        android:text="Rechercher un objet"
+        android:gravity="center_vertical|end"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/shareList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createList" />
 
+
     <Button
         android:id="@+id/shareList"
         android:layout_width="358dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="107dp"
+        android:layout_marginBottom="8dp"
         android:background="#FFA5C8D3"
-        android:text="Partager une liste"
+        android:drawableLeft="@drawable/bonhommes"
+        android:gravity="center_vertical|end"
         android:onClick="shareListPage"
-        app:layout_constraintBottom_toTopOf="@+id/mentions"
+        android:paddingHorizontal="20dp"
+        android:text="Partager une liste"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/researchObject" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="104dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mentions"
+        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/mentions"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:background="#FFA5C8D3"
-        android:text="BoxYourMess | Laroudie/Gistau/Lavergne"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="end"
+        android:lineSpacingExtra="8sp"
+        android:text="BoxYourMess \nGistau - Laroudie - Lavergne"
+        android:textAlignment="textEnd"
         android:textSize="18sp"
+        android:textStyle="bold"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shareList" />
-    <![CDATA[]]>
+        app:layout_constraintTop_toBottomOf="@+id/shareList"
+        app:layout_constraintVertical_bias="0.68" />
+
+
 </android.support.constraint.ConstraintLayout>
