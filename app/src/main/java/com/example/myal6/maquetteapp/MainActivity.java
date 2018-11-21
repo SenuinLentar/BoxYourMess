@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Publicité");
     }
 
     public void creationListPage (View view) {
@@ -23,10 +24,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void scanCodePage (View view) {
+
         startActivity(new Intent(this, scanCodePage.class));
     }
 
+    public void checkListPage (View view) {
+
+        startActivity(new Intent(this, checkListPage.class));
+
+    }
+
     public void shareListPage (View view) {
+
         startActivity(new Intent(this, shareListPage.class));
     }
 }

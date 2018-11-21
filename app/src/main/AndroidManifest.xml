@@ -15,10 +15,10 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".creationListPage"
             android:label="Création de liste"
             android:parentActivityName=".MainActivity">
@@ -47,6 +47,25 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
+
+        <activity android:name=".checkListPage"
+            android:label="Consulter des listes"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".checkList"
+            android:label="Liste"
+            android:parentActivityName=".checkListPage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+
     </application>
 
 </manifest>
